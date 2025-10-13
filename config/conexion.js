@@ -18,4 +18,4 @@ pool.getConnection()
     console.log("Error de conexion")
 })
 
-export default pool
+export default pool;

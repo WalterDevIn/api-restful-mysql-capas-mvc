@@ -1,12 +1,13 @@
 import express from "express";
 import pool from './config/conexion.js'
+import usersRoutes from "./src/routes/users.routes.js";
 
 const app = express();
 const PORT = 3000;
 
 app.use(express.json());
 
-import usersRoutes from "./src/routes/users.routes.js";
+
 app.use(usersRoutes);
 
 app.get("/", (req, res) => {
