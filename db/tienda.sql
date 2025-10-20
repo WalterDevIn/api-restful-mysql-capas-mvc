@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 25-09-2025 a las 00:59:00
+-- Tiempo de generación: 20-10-2025 a las 02:29:10
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -20,6 +20,21 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `tienda`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `products`
+--
+
+CREATE TABLE `products` (
+  `id_product` int(11) NOT NULL,
+  `name` varchar(50) NOT NULL,
+  `description` varchar(80) DEFAULT NULL,
+  `price` float NOT NULL,
+  `stock` int(11) DEFAULT NULL,
+  `image` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -41,6 +56,12 @@ CREATE TABLE `users` (
 --
 
 --
+-- Indices de la tabla `products`
+--
+ALTER TABLE `products`
+  ADD PRIMARY KEY (`id_product`);
+
+--
 -- Indices de la tabla `users`
 --
 ALTER TABLE `users`
@@ -49,6 +70,12 @@ ALTER TABLE `users`
 --
 -- AUTO_INCREMENT de las tablas volcadas
 --
+
+--
+-- AUTO_INCREMENT de la tabla `products`
+--
+ALTER TABLE `products`
+  MODIFY `id_product` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `users`
